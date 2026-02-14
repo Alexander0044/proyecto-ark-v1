@@ -1,17 +1,59 @@
-# React + Vite
+# ARK ASA HUB 🦖
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fan-made React web application inspired by **ARK: Survival Ascended**.  
+This project showcases creatures, survival tips, and an interactive map of *The Island*, built following clean code principles and responsive design practices.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 About The Project
 
-## React Compiler
+ARK ASA HUB is a responsive multi-page web application developed with React and Vite.  
+The goal of the project is to demonstrate:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Component-based architecture
+- Clean folder structure and naming conventions
+- JSON data rendering
+- Third-party component integration (Leaflet)
+- Responsive design using Flexbox and media queries
 
-## Expanding the ESLint configuration
+The home page displays featured creatures dynamically loaded from a JSON array, including their danger level, diet, biome, and description.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# proyecto-ark-v1
+An interactive custom map of **The Island** has been implemented using React Leaflet and ImageOverlay.
+
+---
+
+## Pages Overview
+
+### Home (`/` and `/home`)
+- Hero section with project introduction
+- Dynamically rendered creature cards
+- Survival objectives section
+- Call-to-action section
+- Fully responsive layout
+
+### 🗺 Map (`/maps`)
+- Interactive map of The Island
+- Custom ImageOverlay implementation
+- Dynamic markers loaded from JSON
+- Zoom and navigation enabled
+
+### 📩 Contact (`/contact`)
+- Community information section
+- Functional contact form with basic validation
+- User feedback messages
+
+---
+
+## 🛠 Built With
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [React Router DOM](https://reactrouter.com/)
+- [React Leaflet](https://react-leaflet.js.org/)
+- [Leaflet](https://leafletjs.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+
+---
+
+## 📦 Project Structure
+
