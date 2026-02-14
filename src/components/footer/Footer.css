@@ -1,0 +1,160 @@
+.footer {
+  padding: 26px 0 34px;
+}
+
+.footer-inner {
+  padding: 18px;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo {
+  width: 44px;
+  height: 44px;
+}
+
+.footer-title {
+  font-weight: 900;
+  letter-spacing: 0.6px;
+}
+
+.footer-subtitle {
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  min-width: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col-title {
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.footer-link {
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--text);
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(231, 238, 247, 0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.08s ease, background 0.2s ease;
+}
+
+.social-btn:hover {
+  background: rgba(231, 238, 247, 0.1);
+}
+
+.social-btn:active {
+  transform: translateY(1px);
+}
+
+.footer-newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-newsletter-row {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-input {
+  flex: 1;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(231, 238, 247, 0.06);
+  color: var(--text);
+}
+
+.footer-input::placeholder {
+  color: rgba(167, 180, 196, 0.7);
+}
+
+.footer-btn {
+  padding: 12px 14px;
+}
+
+.footer-mini {
+  font-size: 12px;
+}
+
+.footer-bottom {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-legal a {
+  color: var(--muted);
+}
+
+.footer-legal a:hover {
+  color: var(--text);
+}
+
+.footer-sep {
+  margin: 0 8px;
+  color: rgba(167, 180, 196, 0.6);
+}
+
+.back-top {
+  color: var(--muted);
+}
+
+.back-top:hover {
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .footer-newsletter-row {
+    flex-direction: column;
+  }
+}

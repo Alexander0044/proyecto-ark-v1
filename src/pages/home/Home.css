@@ -1,0 +1,155 @@
+.home-hero {
+  padding: 18px;
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.home-hero-content {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.home-title {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 46px);
+  letter-spacing: -0.6px;
+}
+
+.home-title-accent {
+  color: var(--accent);
+}
+
+.home-subtitle {
+  margin: 0;
+  max-width: 62ch;
+  line-height: 1.55;
+}
+
+.home-hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.home-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.home-stat {
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(231, 238, 247, 0.05);
+  min-width: 150px;
+}
+
+.home-stat-number {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.home-stat-label {
+  font-size: 12px;
+}
+
+.home-hero-card {
+  flex: 0.8;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.home-hero-card-title {
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.home-hero-card-text {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.home-hero-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.home-pill {
+  border: 1px solid var(--border);
+  background: rgba(231, 238, 247, 0.05);
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.home-section {
+  margin-top: 22px;
+}
+
+.home-section-head {
+  margin-bottom: 12px;
+}
+
+.home-section-title {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.home-section-desc {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.creatures-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.creatures-grid > * {
+  flex: 1 1 260px;
+}
+
+.objectives {
+  padding: 16px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.objective {
+  flex: 1 1 240px;
+  border: 1px solid var(--border);
+  background: rgba(231, 238, 247, 0.05);
+  padding: 14px;
+  border-radius: 16px;
+}
+
+.objective-title {
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.home-cta {
+  margin-top: 22px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .home-hero {
+    flex-direction: column;
+  }
+}
