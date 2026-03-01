@@ -42,6 +42,10 @@ An interactive custom map of **The Island** has been implemented using React Lea
 - Functional contact form with basic validation
 - User feedback messages
 
+### Noticies
+
+- Coummunity information for oficial developers
+
 ---
 
 ## 🛠 Built With
