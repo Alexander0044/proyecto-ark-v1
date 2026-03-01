@@ -95,6 +95,13 @@
   margin-bottom: 10px;
 }
 
+.leaflet-map {
+  height: 600px;
+  width: 100%;
+  border-radius: 16px;
+  background: #111; 
+}
+
 @media (max-width: 640px) {
   .leaflet-map {
     height: 340px;

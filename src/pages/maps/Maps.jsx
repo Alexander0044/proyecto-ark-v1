@@ -1,8 +1,19 @@
-import { MapContainer, ImageOverlay, Marker, Popup } from "react-leaflet";
+import { useEffect } from "react";
+import { MapContainer, ImageOverlay, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import { mapPointsData } from "../../data/map-points-data.js";
 import "leaflet/dist/leaflet.css";
 import "./Maps.css";
+
+function FitBounds({ bounds }) {
+  const map = useMap();
+
+  useEffect(() => {
+    map.fitBounds(bounds);
+  }, [map, bounds]);
+
+  return null;
+}
 
 export default function Maps() {
   const imageWidth = 2000;
@@ -23,11 +34,13 @@ export default function Maps() {
         <MapContainer
           crs={L.CRS.Simple}
           bounds={bounds}
-          center={[imageHeight / 2, imageWidth / 2]}
-          zoom={-1}
+          maxBounds={bounds}
+          maxBoundsViscosity={1.0}
           minZoom={-2}
           className="leaflet-map"
         >
+          <FitBounds bounds={bounds} />
+
           <ImageOverlay
             url="/images/maps/the-island-map.webp"
             bounds={bounds}

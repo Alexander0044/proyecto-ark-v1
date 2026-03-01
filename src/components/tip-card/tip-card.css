@@ -1,0 +1,23 @@
+.tip-card {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tip-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.tip-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.tip-content {
+  margin: 0;
+  line-height: 1.55;
+}

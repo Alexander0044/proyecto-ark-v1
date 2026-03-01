@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { creaturesData } from "../../data/creatures-data.js";
 import CreatureCard from "../../components/creature-card/CreatureCard.jsx";
+import TipsBoard from "../../components/tips-board/TipsBoard";
 import "./Home.css";
 
 export default function Home() {
@@ -79,6 +80,17 @@ export default function Home() {
             <CreatureCard key={creature.id} {...creature} />
           ))}
         </div>
+      </section>
+
+      <section className="home-section">
+        <div className="home-section-head">
+          <h2 className="home-section-title">Consejos de la tribu</h2>
+          <p className="muted home-section-desc">
+            Consejos cargados desde Firebase Realtime Database con filtro por categorías y búsqueda.
+          </p>
+        </div>
+
+        <TipsBoard />
       </section>
 
       <section className="home-section">

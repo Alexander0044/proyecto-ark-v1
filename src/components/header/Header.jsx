@@ -34,6 +34,10 @@ export default function Header() {
           <NavLink to="/contact" className={getNavClass}>
             Contacto
           </NavLink>
+          
+          <NavLink to="/news" className={getNavClass}>
+            Noticias
+          </NavLink>
         </nav>
 
         <a className="button header-cta" href="#featured-creatures">

@@ -1,0 +1,24 @@
+.news-head {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.news-title {
+  margin: 0 0 6px;
+}
+
+.news-list {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.news-item-title {
+  margin: 0 0 6px;
+}
+
+.news-item-desc {
+  margin: 0;
+  line-height: 1.5;
+}

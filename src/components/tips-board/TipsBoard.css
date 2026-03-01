@@ -1,0 +1,87 @@
+.tips-board {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tips-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #e6f1ff;
+  text-align: center;
+}
+
+.tips-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.tips-filters button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(100, 180, 255, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  color: #cfe9ff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.tips-filters button:hover {
+  background: rgba(100, 180, 255, 0.15);
+  border-color: rgba(100, 180, 255, 0.6);
+  box-shadow: 0 0 12px rgba(100, 180, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+.tip-card {
+  background: linear-gradient(
+    145deg,
+    rgba(10, 25, 47, 0.8),
+    rgba(5, 15, 30, 0.9)
+  );
+  border: 1px solid rgba(100, 180, 255, 0.15);
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: #cfe9ff;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.tip-card:hover {
+  border-color: rgba(100, 180, 255, 0.5);
+  box-shadow: 0 0 20px rgba(100, 180, 255, 0.25);
+  transform: translateY(-4px);
+}
+
+.tip-card h3 {
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+}
+
+.tip-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #bcd6f6;
+}
+
+.tip-category {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: rgba(100, 180, 255, 0.15);
+  border: 1px solid rgba(100, 180, 255, 0.3);
+  color: #9fd0ff;
+}
