@@ -132,20 +132,31 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-bottom">
-          <div className="muted footer-legal">
-            © 2026 ARK ASA HUB. Todos los derechos reservados.{" "}
-            <span className="footer-sep">|</span>{" "}
-            <a href="#">Política de Privacidad y Cookies</a>{" "}
-            <span className="footer-sep">|</span>{" "}
-            <a href="#">Condiciones de Uso</a>
-          </div>
+        <div className="muted footer-legal">
+          © 2026 ARK ASA HUB. Todos los derechos reservados.
+          <span className="footer-sep"> | </span>
+
+          <Link className="footer-link" to="/privacy-policy">
+            Política de Privacidad
+          </Link>
+
+          <span className="footer-sep"> | </span>
+
+          <Link className="footer-link" to="/cookies-policy">
+            Cookies
+          </Link>
+
+          <span className="footer-sep"> | </span>
+
+          <Link className="footer-link" to="/terms-of-use">
+            Condiciones de Uso
+          </Link>
 
           <a className="back-top" href="#top">
             Volver arriba ↑
           </a>
-        </div>
       </div>
-    </footer>
+    </div>
+    </footer >
   );
 }
