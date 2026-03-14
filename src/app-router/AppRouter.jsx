@@ -9,6 +9,7 @@ import News from "../pages/news/News.jsx";
 import PrivacyPolicy from "../pages/privacy-policy/PrivacyPolicy.jsx";
 import CookiesPolicy from "../pages/cookies-policy/CookiesPolicy.jsx";
 import TermsOfUse from "../pages/terms-of-use/TermsOfUse.jsx";
+import NewsDetail from "../pages/news-detail/NewsDetail";
 
 export default function AppRouter() {
   return (

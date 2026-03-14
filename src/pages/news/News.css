@@ -1,24 +1,24 @@
-.news-head {
-  padding: 16px;
-  margin-bottom: 16px;
+.news-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7fd6ff;
 }
 
-.news-title {
-  margin: 0 0 6px;
+.news-rss-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 700;
 }
 
-.news-list {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.news-date {
+  margin-bottom: 0.5rem;
+  color: #7fd6ff;
 }
 
-.news-item-title {
-  margin: 0 0 6px;
-}
-
-.news-item-desc {
-  margin: 0;
-  line-height: 1.5;
+.news-read-more {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-weight: 700;
 }

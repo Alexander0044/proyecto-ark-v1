@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Noticias de ARK</title>
+    <link>https://TU-PROYECTO.web.app/news</link>
+    <description>Feed RSS de noticias del proyecto</description>
+
+    <item>
+      <title>Guía del evento de invierno</title>
+      <link>https://TU-PROYECTO.web.app/news/evento-invierno</link>
+      <description>Consejos para sobrevivir en biomas fríos.</description>
+    </item>
+
+    <item>
+      <title>Mejores criaturas para farmear metal</title>
+      <link>https://TU-PROYECTO.web.app/news/farmear-metal</link>
+      <description>Las criaturas más eficientes para obtener metal.</description>
+    </item>
+
+    <item>
+      <title>Checklist inicial para defender tu base</title>
+      <link>https://TU-PROYECTO.web.app/news/defensa-base</link>
+      <description>Pasos prácticos para asegurar tu primera base.</description>
+    </item>
+  </channel>
+</rss>

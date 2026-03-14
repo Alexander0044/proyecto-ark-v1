@@ -3,6 +3,8 @@ import { creaturesData } from "../../data/creatures-data.js";
 import CreatureCard from "../../components/creature-card/CreatureCard.jsx";
 import TipsBoard from "../../components/tips-board/TipsBoard";
 import "./Home.css";
+import TribeBoard from "../../components/tribe-board/TribeBoard";
+import { tribePostsData } from "../../data/tribe-posts-data";
 
 export default function Home() {
   return (
@@ -136,6 +138,8 @@ export default function Home() {
         <Link className="button" to="/maps">
           Ir al mapa
         </Link>
+        
+        <TribeBoard initialPosts={tribePostsData}/>
       </section>
     </div>
   );

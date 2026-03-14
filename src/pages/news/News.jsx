@@ -1,105 +1,43 @@
-import { useEffect, useState } from "react";
 import "./News.css";
-
-const STEAM_RSS = "https://store.steampowered.com/feeds/news/app/2399830/?l=english";
-const PROXY = (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
-
-function parseRss(xmlText) {
-  const doc = new DOMParser().parseFromString(xmlText, "text/xml");
-  const items = Array.from(doc.querySelectorAll("item")).slice(0, 10);
-
-  return items.map((item) => {
-    const title = item.querySelector("title")?.textContent?.trim() ?? "";
-    const link = item.querySelector("link")?.textContent?.trim() ?? "";
-    const rawDesc =
-      item.querySelector("description")?.textContent ??
-      item.querySelector("content\\:encoded")?.textContent ??
-      "";
-
-    const description = rawDesc.replace(/<[^>]*>/g, "").trim();
-
-    return { title, link, description };
-  });
-}
+import { Link } from "react-router-dom";
+import { newsData } from "../../data/news-data";
 
 export default function News() {
-  const [items, setItems] = useState([]);
-  const [status, setStatus] = useState("loading"); // loading | ok | error
-  const [errorMsg, setErrorMsg] = useState("");
-
-  useEffect(() => {
-    let cancelled = false;
-
-    async function load() {
-      setStatus("loading");
-      setErrorMsg("");
-
-      try {
-        const res = await fetch(PROXY(STEAM_RSS));
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-        const text = await res.text();
-        const parsed = parseRss(text);
-
-        if (!parsed.length) throw new Error("El RSS llegó vacío o no era XML RSS válido.");
-
-        if (!cancelled) {
-          setItems(parsed);
-          setStatus("ok");
-        }
-      } catch (err) {
-        if (!cancelled) {
-          setStatus("error");
-          setErrorMsg(err?.message || "Error desconocido");
-        }
-      }
-    }
-
-    load();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
   return (
     <div className="container">
       <section className="panel news-head">
+        <p className="news-eyebrow">RSS y noticias internas</p>
         <h1 className="news-title">Noticias de ARK</h1>
 
         <p className="muted">
-          Fuente:{" "}
-          <a href={STEAM_RSS} target="_blank" rel="noreferrer">
-            Steam RSS
-          </a>
+          Esta página contiene noticias internas del proyecto. El archivo RSS
+          apunta a estas mismas URLs de noticias dentro de la aplicación.
         </p>
+
+        <a
+          href="/rss/ark-news.xml"
+          target="_blank"
+          rel="noreferrer"
+          className="news-rss-link"
+        >
+          Abrir archivo RSS
+        </a>
       </section>
 
       <section className="panel news-list">
-        {status === "loading" && <p className="muted">Cargando noticias...</p>}
+        {newsData.map((item) => (
+          <article key={item.id} className="news-item">
+            <p className="muted news-date">{item.date}</p>
 
-        {status === "error" && (
-          <p className="muted">
-            No se pudieron cargar noticias. {errorMsg ? `(${errorMsg})` : ""}
-            <br />
-            Prueba recargar o revisa la consola (F12) por si el proxy está caído.
-          </p>
-        )}
+            <h3 className="news-item-title">{item.title}</h3>
 
-        {status === "ok" &&
-          items.map((item) => (
-            <article key={item.link || item.title} className="news-item">
-              <h3 className="news-item-title">
-                <a href={item.link} target="_blank" rel="noreferrer">
-                  {item.title || "Sin título"}
-                </a>
-              </h3>
-              <p className="muted news-item-desc">
-                {item.description.length > 220
-                  ? `${item.description.slice(0, 220)}...`
-                  : item.description || "Sin descripción"}
-              </p>
-            </article>
-          ))}
+            <p className="muted news-item-desc">{item.summary}</p>
+
+            <Link to={`/news/${item.slug}`} className="news-read-more">
+              Leer noticia completa
+            </Link>
+          </article>
+        ))}
       </section>
     </div>
   );
