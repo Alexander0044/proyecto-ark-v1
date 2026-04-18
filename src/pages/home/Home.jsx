@@ -1,12 +1,27 @@
 import { Link } from "react-router-dom";
-import { creaturesData } from "../../data/creatures-data.js";
-import CreatureCard from "../../components/creature-card/CreatureCard.jsx";
 import TipsBoard from "../../components/tips-board/TipsBoard";
 import "./Home.css";
 import TribeBoard from "../../components/tribe-board/TribeBoard";
 import { tribePostsData } from "../../data/tribe-posts-data";
+import { useState, useEffect } from 'react';
+import { getCreatures } from '../../services/dinosaurService';
+import ImportExportPanel from '../../components/import-export-panel/ImportExportPanel';
+import CreatureCard from '../../components/creature-card/CreatureCard';
+
 
 export default function Home() {
+
+  const [creatures, setCreatures] = useState([]);
+
+  const loadCreatures = async () => {
+    const data = await getCreatures();
+    setCreatures(data);
+  };
+
+  useEffect(() => {
+    loadCreatures();
+  }, []);
+
   return (
     <div id="top" className="container">
       <section className="home-hero panel">
@@ -73,14 +88,25 @@ export default function Home() {
         <div className="home-section-head">
           <h2 className="home-section-title">Criaturas destacadas</h2>
           <p className="muted home-section-desc">
-            Información generada desde un array JSON y renderizada mediante componentes reutilizables.
+            Información cargada desde Firebase con soporte de importación y exportación en JSON, CSV y XML.
           </p>
         </div>
 
+        <ImportExportPanel
+          creatures={creatures}
+          onImportDone={loadCreatures}
+        />
+
         <div className="creatures-grid">
-          {creaturesData.map((creature) => (
-            <CreatureCard key={creature.id} {...creature} />
-          ))}
+          {creatures.length > 0 ? (
+            creatures.map((creature) => (
+              <CreatureCard key={creature.id} {...creature} />
+            ))
+          ) : (
+            <p className="muted" style={{ textAlign: 'center', width: '100%' }}>
+              No hay criaturas en Firebase. Importa un archivo para comenzar.
+            </p>
+          )}
         </div>
       </section>
 
@@ -138,8 +164,8 @@ export default function Home() {
         <Link className="button" to="/maps">
           Ir al mapa
         </Link>
-        
-        <TribeBoard initialPosts={tribePostsData}/>
+
+        <TribeBoard initialPosts={tribePostsData} />
       </section>
     </div>
   );
