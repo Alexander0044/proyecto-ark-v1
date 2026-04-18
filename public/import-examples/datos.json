@@ -1,0 +1,8 @@
+[
+  { "name": "T-Rex", "diet": "Carnívoro", "level": "Alpha", "habitat": "Bosque" },
+  { "name": "Triceratops", "diet": "Herbívoro", "level": "Común", "habitat": "Llanura" },
+  { "name": "Raptor", "diet": "Carnívoro", "level": "Manada", "habitat": "Jungla" },
+  { "name": "Brontosaurus", "diet": "Herbívoro", "level": "Común", "habitat": "Llanura" },
+  { "name": "Pteranodon", "diet": "Carnívoro", "level": "Volador", "habitat": "Costa" },
+  { "name": "Ankylosaurus", "diet": "Herbívoro", "level": "Tanque", "habitat": "Montaña" }
+]

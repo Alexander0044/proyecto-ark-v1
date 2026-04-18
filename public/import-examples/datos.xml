@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creatures>
+  <creature>
+    <name>T-Rex</name>
+    <diet>Carnívoro</diet>
+    <level>Alpha</level>
+    <habitat>Bosque</habitat>
+  </creature>
+  <creature>
+    <name>Triceratops</name>
+    <diet>Herbívoro</diet>
+    <level>Común</level>
+    <habitat>Llanura</habitat>
+  </creature>
+  <creature>
+    <name>Raptor</name>
+    <diet>Carnívoro</diet>
+    <level>Manada</level>
+    <habitat>Jungla</habitat>
+  </creature>
+  <creature>
+    <name>Brontosaurus</name>
+    <diet>Herbívoro</diet>
+    <level>Común</level>
+    <habitat>Llanura</habitat>
+  </creature>
+  <creature>
+    <name>Pteranodon</name>
+    <diet>Carnívoro</diet>
+    <level>Volador</level>
+    <habitat>Costa</habitat>
+  </creature>
+  <creature>
+    <name>Ankylosaurus</name>
+    <diet>Herbívoro</diet>
+    <level>Tanque</level>
+    <habitat>Montaña</habitat>
+  </creature>
+</creatures>
